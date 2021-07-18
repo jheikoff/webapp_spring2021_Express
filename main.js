@@ -1,6 +1,6 @@
 const express = require("express"), app = express(),
-homeController = require("./controllers/homeController"),
-layouts = require("express-ejs-layouts");
+    homeController = require("./controllers/homeController"),
+    layouts = require("express-ejs-layouts");
 
 app.set("port", process.env.PORT || 3000);
 
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.use(
     express.urlencoded({
-        extended:false
+        extended: false
     })
 );
 
@@ -28,7 +28,7 @@ app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 
 
-app.listen(app.get("port"), () =>{
+app.listen(app.get("port"), () => {
     console.log(`Server is running on port: ${app.get("port")}`)
 
 });
