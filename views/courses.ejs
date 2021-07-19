@@ -4,14 +4,14 @@
     </div>
     <div class="col-sm-6">
         <h1>List of courses</h1>
-        <% offeredCourses.ForEach(course => { %>
+        <% offeredCourses.forEach(course => { %>
         <h5>
-            <% course.title %>
+            <%= course.title %>
         </h5>
         <span>
-            $ <% course.cost %>
+            $ <%= course.cost %>
         </span>
         <% }); %>
     </div>
-    
+
 </div>

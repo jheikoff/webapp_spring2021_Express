@@ -1,4 +1,4 @@
-var courses = [
+var course = [
     {
         title: "Raspberry Cake",
         cost:50
@@ -16,7 +16,7 @@ var courses = [
 
 
 exports.showCourses = (req, res) => {
-    res.render("courses", {offeredCourses: courses});
+    res.render("courses", {offeredCourses: course});
 }
 
 exports.showSignUp = (req, res) => {
