@@ -11,4 +11,5 @@ exports.internalServerError = (error, req, res, next) => {
     res.status(errorCode);
     res.send(`${errorCode}, Sorry! Something went wrong with your application`);
     console.error(error.stack)
+    next()
 }
